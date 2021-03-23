@@ -1,0 +1,1 @@
+[[["FET-A"], 1.0], [["FET-B"], 0.5], [["inductor"], 1.0], [["capacitor"], 0.5], [["FET-A", "FET-B"], 0.5], [["FET-A", "inductor"], 1.0], [["FET-A", "capacitor"], 0.5], [["inductor", "capacitor"], 0.5],[["FET-B", "inductor"], 0.5],   [["FET-A", "FET-B", "inductor"], 0.5], [["FET-A", "inductor", "capacitor"], 0.5]]
