@@ -1,0 +1,40 @@
+path: VIN - L - Sb - GND
+freq: 0.1447
+path: VIN - L - Sa - VOUT
+freq: 0.1214
+path: VIN - L - Sb - VOUT
+freq: 0.0998
+path: VIN - Sa - L - VOUT
+freq: 0.0914
+path: VIN - Sb - L - VOUT
+freq: 0.0914
+path: VIN - L - Sa - GND
+freq: 0.0906
+path: VOUT - Sb - Sa - GND
+freq: 0.0763
+path: VOUT - Sa - Sb - GND
+freq: 0.0747
+path: VIN - Sa - Sb - VOUT
+freq: 0.0740
+path: VIN - Sb - Sa - VOUT
+freq: 0.0707
+path: VOUT - L - Sa - GND
+freq: 0.0671
+path: VIN - L - Sa - Sa - VOUT
+freq: 0.0650
+path: VIN - Sa - L - GND
+freq: 0.0612
+path: VIN - C - VOUT
+freq: 0.0583
+path: VOUT - Sb - L - GND
+freq: 0.0579
+path: VIN - Sb - L - GND
+freq: 0.0571
+path: VOUT - Sa - Sa - Sb - GND
+freq: 0.0549
+path: VOUT - Sa - L - GND
+freq: 0.0529
+path: VIN - Sb - Sa - GND
+freq: 0.0480
+path: VIN - Sa - Sb - GND
+freq: 0.0430

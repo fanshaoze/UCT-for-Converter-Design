@@ -1,0 +1,10 @@
+path: VIN - inductor - FET-B - GND
+freq: 0.1447
+path: VIN - inductor - FET-A - VOUT
+freq: 0.1214
+path: VOUT - inductor - FET-A - GND
+freq: 0.0671
+path: VIN - FET-B - FET-A - GND
+freq: 0.0480
+path: VIN - FET-A - FET-B - GND
+freq: 0.0430
