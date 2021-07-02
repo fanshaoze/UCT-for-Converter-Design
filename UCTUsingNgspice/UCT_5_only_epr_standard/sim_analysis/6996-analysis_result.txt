@@ -1,0 +1,12 @@
+PCC-6996-000000
+efficiency:89%
+output voltage:21
+
+Errors distribution:
+{'efficiency_is_greater_than_one': 0, 'efficiency_is_less_than_zero': 0, 'less_than_one_cycle': 0, 'missing_output_type': 0, 'output_is_not_aligned': 0, 'power_in_is_zero': 0, 'output_has_not_settled': 0, 'transient_simulation_failure': 0}
+Total invalid data: 0
+
+Valid distribution:
+[(0, 0), (0, 0)]
+Total valid data: 0
+
