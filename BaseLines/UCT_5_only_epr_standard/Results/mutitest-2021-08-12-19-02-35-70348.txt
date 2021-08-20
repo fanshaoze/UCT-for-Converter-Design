@@ -1,0 +1,33 @@
+max_depth,num_runs,avg_step
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+Final topology of game :
+component_pool:['GND', 'VIN', 'VOUT', 'Sa0', 'C0', 'L0', 'C1', 'Sa1']
+0.9
+port_pool:['GND', 'VIN', 'VOUT', 'Sa0-left', 'Sa0-right', 'C0-left', 'C0-right', 'L0-left', 'L0-right', 'C1-left', 'C1-right', 'Sa1-left', 'Sa1-right']
+graph:defaultdict(<class 'set'>, {0: {8}, 8: {0}, 1: {10}, 10: {1, 3}, 2: {11, 6}, 11: {9, 2}, 3: {10}, 4: {9}, 9: {11, 4}, 5: {12, 7}, 12: {5}, 6: {2}, 7: {5}})
+efficiency:[{'parameter': '0.9', 'efficiency': 0.04, 'output_voltage': 47.0}]
+final reward:1.417921875149774e-07
+step:0
+query time:14 total tree size:0
+hash query time:45
+end at:2021-08-12 19:10:03.007024
+result with parameter:0.9
+----------------------------------------------------------------------
+configs:{'max_episode_length': 100000000, 'deterministic': 'True', 'ucb_scalar': 20.0, 'gamma': 1.0, 'rave_k': 16.0, 'rave_scalar': 1.0, 'leaf_value': 0, 'end_episode_value': 0, 'algorithm': 'BF', 'root_parallel': False, 'act_selection': 'Pmerge', 'tree_num': 1, 'thread_num': 1, 'position_num': 1, 'game_num': 1, 'dep_start': -1, 'dep_end': 0, 'dep_step_len': 1, 'traj_start': 20, 'traj_end': 21, 'traj_step_len': 1, 'sys_os': 'linux', 'output': False, 'num_component': 8, 'freq': '200000', 'vin': '50', 'D': '0.48', 'mutate_num': 3, 'mutate_generation': 20, 'individual_num': 15, 'must_have_switch': False, 'prohibit_path': True, 'approve_path': False, 'whole_default_policy': False, 'component_default_policy': False, 'path_default_policy': False, 'DP_path_basic_weight': 0.01, 'target_vout': 200, 'range_percentage': 0.5, 'reward_method': 'analytics', 'fix_paras': None, 'min_vout': 100.0, 'max_vout': 300.0}
+final rewards:0
+['efficiency', 'vout', 'reward', 'DC_para', 'query']
+[0.04, 47.0, 1.417921875149774e-07, '0.9', 14]

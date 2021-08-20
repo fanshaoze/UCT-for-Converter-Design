@@ -1,0 +1,89 @@
+max_depth,num_runs,avg_step
+----------------------------------------------------------------------
+increased tree size:77
+action 0 :nodeon0
+action child 0 avg_return:0.0
+action child 0 num_visits_:6
+state child 0child node reward:0
+state child 0ports:['GND', 'VIN', 'VOUT', 'Sb0-left', 'Sb0-right', 'Sa0-left', 'Sa0-right']
+state child 0graph:defaultdict(<class 'set'>, {})
+action 1 :nodeon1
+action child 1 avg_return:0.0
+action child 1 num_visits_:5
+state child 1child node reward:0
+state child 1ports:['GND', 'VIN', 'VOUT', 'Sb0-left', 'Sb0-right', 'Sb1-left', 'Sb1-right']
+state child 1graph:defaultdict(<class 'set'>, {})
+action 2 :nodeon2
+action child 2 avg_return:0.0
+action child 2 num_visits_:5
+state child 2child node reward:0
+state child 2ports:['GND', 'VIN', 'VOUT', 'Sb0-left', 'Sb0-right', 'C0-left', 'C0-right']
+state child 2graph:defaultdict(<class 'set'>, {})
+action 3 :nodeon3
+action child 3 avg_return:0.0
+action child 3 num_visits_:3
+state child 3child node reward:0
+state child 3ports:['GND', 'VIN', 'VOUT', 'Sb0-left', 'Sb0-right', 'L0-left', 'L0-right']
+state child 3graph:defaultdict(<class 'set'>, {})
+instant reward:0cumulate reward: 0planning time:30cumulate planning time:30Final topology of game :
+component_pool:['GND', 'VIN', 'VOUT', 'Sb0', 'Sa0', 'L0', 'C0', 'L1']
+0.9
+port_pool:['GND', 'VIN', 'VOUT', 'Sb0-left', 'Sb0-right', 'Sa0-left', 'Sa0-right', 'L0-left', 'L0-right', 'C0-left', 'C0-right', 'L1-left', 'L1-right']
+graph:defaultdict(<class 'set'>, {0: {9, 3}, 3: {0}, 1: {12}, 12: {1}, 2: {7}, 7: {2}, 4: {11}, 11: {4, 6}, 5: {8}, 8: {10, 5}, 6: {11}, 10: {8}, 9: {0}})
+efficiency:[{'parameter': '0.9', 'efficiency': {'efficiency': 0.47, 'output_voltage': 475.0}, 'output_voltage': 475.0}]
+final reward:0
+step:1.0
+query time:15 total tree size:77
+hash query time:36
+end at:2021-05-05 03:23:55.619115
+start at:2021-05-05 03:23:24.381863
+execute time:31 seconds
+result with parameter:0.9
+----------------------------------------------------------------------
+configs:{'max_episode_length': 100000000, 'deterministic': 'True', 'ucb_scalar': 20.0, 'gamma': 1.0, 'rave_k': 16.0, 'rave_scalar': 1.0, 'leaf_value': 0, 'end_episode_value': 0, 'algorithm': 'UCF', 'root_parallel': False, 'act_selection': 'Pmerge', 'tree_num': 1, 'thread_num': 1, 'position_num': 1, 'game_num': 1, 'dep_start': -1, 'dep_end': 0, 'dep_step_len': 1, 'traj_start': 20, 'traj_end': 21, 'traj_step_len': 1, 'sys_os': 'linux', 'output': False, 'num_component': 8, 'freq': '200000', 'vin': '50', 'D': '0.48', 'mutate_num': 5, 'mutate_generation': 20, 'individual_num': 20, 'must_have_switch': False, 'prohibit_path': True, 'approve_path': False, 'whole_default_policy': False, 'component_default_policy': False, 'path_default_policy': False, 'DP_path_basic_weight': 0.01, 'target_vout': 50, 'range_percentage': 0.5, 'min_vout': 25.0, 'max_vout': 75.0}
+final rewards:0
+----------------------------------------------------------------------
+increased tree size:77
+action 0 :nodeon3
+action child 0 avg_return:0.0
+action child 0 num_visits_:5
+state child 0child node reward:0
+state child 0ports:['GND', 'VIN', 'VOUT', 'Sa0-left', 'Sa0-right', 'L0-left', 'L0-right']
+state child 0graph:defaultdict(<class 'set'>, {})
+action 1 :nodeon1
+action child 1 avg_return:0.0
+action child 1 num_visits_:2
+state child 1child node reward:0
+state child 1ports:['GND', 'VIN', 'VOUT', 'Sa0-left', 'Sa0-right', 'Sb0-left', 'Sb0-right']
+state child 1graph:defaultdict(<class 'set'>, {})
+action 2 :nodeon0
+action child 2 avg_return:0.0
+action child 2 num_visits_:4
+state child 2child node reward:0
+state child 2ports:['GND', 'VIN', 'VOUT', 'Sa0-left', 'Sa0-right', 'Sa1-left', 'Sa1-right']
+state child 2graph:defaultdict(<class 'set'>, {})
+action 3 :nodeon2
+action child 3 avg_return:0.0
+action child 3 num_visits_:8
+state child 3child node reward:0
+state child 3ports:['GND', 'VIN', 'VOUT', 'Sa0-left', 'Sa0-right', 'C0-left', 'C0-right']
+state child 3graph:defaultdict(<class 'set'>, {})
+instant reward:0cumulate reward: 0planning time:28cumulate planning time:28Final topology of game :
+component_pool:['GND', 'VIN', 'VOUT', 'Sa0', 'C0', 'L0', 'Sa1', 'L1']
+0.9
+port_pool:['GND', 'VIN', 'VOUT', 'Sa0-left', 'Sa0-right', 'C0-left', 'C0-right', 'L0-left', 'L0-right', 'Sa1-left', 'Sa1-right', 'L1-left', 'L1-right']
+graph:defaultdict(<class 'set'>, {0: {11}, 11: {0}, 1: {6}, 6: {1, 4}, 2: {9, 7}, 7: {2}, 3: {8, 12}, 12: {10, 3}, 4: {6}, 5: {9}, 9: {2, 5}, 8: {3}, 10: {12}})
+efficiency:[{'parameter': '0.9', 'efficiency': {'efficiency': 0.0, 'output_voltage': 0.0}, 'output_voltage': 0.0}]
+final reward:0
+step:1.0
+query time:14 total tree size:77
+hash query time:45
+end at:2021-05-05 03:24:27.034270
+start at:2021-05-05 03:23:24.381863
+execute time:62 seconds
+result with parameter:0.9
+----------------------------------------------------------------------
+configs:{'max_episode_length': 100000000, 'deterministic': 'True', 'ucb_scalar': 20.0, 'gamma': 1.0, 'rave_k': 16.0, 'rave_scalar': 1.0, 'leaf_value': 0, 'end_episode_value': 0, 'algorithm': 'UCF', 'root_parallel': False, 'act_selection': 'Pmerge', 'tree_num': 1, 'thread_num': 1, 'position_num': 1, 'game_num': 1, 'dep_start': -1, 'dep_end': 0, 'dep_step_len': 1, 'traj_start': 20, 'traj_end': 21, 'traj_step_len': 1, 'sys_os': 'linux', 'output': False, 'num_component': 8, 'freq': '200000', 'vin': '50', 'D': '0.48', 'mutate_num': 5, 'mutate_generation': 20, 'individual_num': 20, 'must_have_switch': False, 'prohibit_path': True, 'approve_path': False, 'whole_default_policy': False, 'component_default_policy': False, 'path_default_policy': False, 'DP_path_basic_weight': 0.01, 'target_vout': 50, 'range_percentage': 0.5, 'min_vout': 25.0, 'max_vout': 75.0}
+final rewards:0
+Traj: 20#Efficiency:{'efficiency': 0.47, 'output_voltage': 475.0}#FinalRewards:0#ExecuteTime:31#QueryTime:15#TreeSize:77#HashSize:15
+Traj: 20#Efficiency:{'efficiency': 0.0, 'output_voltage': 0.0}#FinalRewards:0#ExecuteTime:62#QueryTime:14#TreeSize:77#HashSize:14

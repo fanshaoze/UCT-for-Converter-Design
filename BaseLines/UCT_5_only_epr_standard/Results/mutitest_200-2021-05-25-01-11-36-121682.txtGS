@@ -1,0 +1,72 @@
+Final topology of game :
+component_pool:['GND', 'VIN', 'VOUT', 'L0', 'Sb0', 'Sa0', 'Sb1', 'Sa1']
+0.1
+port_pool:['GND', 'VIN', 'VOUT', 'L0-left', 'L0-right', 'Sb0-left', 'Sb0-right', 'Sa0-left', 'Sa0-right', 'Sb1-left', 'Sb1-right', 'Sa1-left', 'Sa1-right']
+graph:defaultdict(<class 'set'>, {0: {6}, 6: {0, 10}, 1: {12}, 12: {1, 7}, 2: {8, 3}, 8: {2}, 3: {2}, 4: {9}, 9: {11, 4, 5}, 5: {9}, 10: {6}, 7: {12}, 11: {9}})
+efficiency:[{'parameter': '0.1', 'efficiency': {'efficiency': 0.64, 'output_voltage': 93.0}, 'output_voltage': 93.0}]
+final reward:0.0013818636071277286
+query time:12
+hash query time:49
+end at:2021-05-25 01:11:52.349581
+start at:2021-05-25 01:11:36.545827
+execute time:15 seconds
+result with parameter:0.1
+----------------------------------------------------------------------
+configs:{'max_episode_length': 100000000, 'deterministic': 'True', 'ucb_scalar': 20.0, 'gamma': 1.0, 'rave_k': 16.0, 'rave_scalar': 1.0, 'leaf_value': 0, 'end_episode_value': 0, 'algorithm': 'GS', 'root_parallel': False, 'act_selection': 'Pmerge', 'tree_num': 1, 'thread_num': 1, 'position_num': 1, 'game_num': 1, 'dep_start': -1, 'dep_end': 0, 'dep_step_len': 1, 'traj_start': 20, 'traj_end': 21, 'traj_step_len': 1, 'sys_os': 'linux', 'output': False, 'num_component': 8, 'freq': '200000', 'vin': '50', 'D': '0.48', 'mutate_num': 3, 'mutate_generation': 20, 'individual_num': 15, 'must_have_switch': False, 'prohibit_path': True, 'approve_path': False, 'whole_default_policy': False, 'component_default_policy': False, 'path_default_policy': False, 'DP_path_basic_weight': 0.01, 'target_vout': 200, 'range_percentage': 0.5, 'min_vout': 100.0, 'max_vout': 300.0}
+final rewards:0.0013818636071277286
+--------------------Finished genetic search-------------------
+Final topology of game :
+component_pool:['GND', 'VIN', 'VOUT', 'C0', 'Sa0', 'Sb0', 'L0', 'Sb1']
+0.2
+port_pool:['GND', 'VIN', 'VOUT', 'C0-left', 'C0-right', 'Sa0-left', 'Sa0-right', 'Sb0-left', 'Sb0-right', 'L0-left', 'L0-right', 'Sb1-left', 'Sb1-right']
+graph:defaultdict(<class 'set'>, {0: {12}, 12: {0}, 1: {9, 4, 7}, 7: {1}, 2: {8, 3, 5}, 8: {2}, 3: {2}, 4: {1}, 5: {2}, 6: {10, 11}, 10: {6}, 9: {1}, 11: {6}})
+efficiency:[{'parameter': '0.2', 'efficiency': {'efficiency': 0.58, 'output_voltage': 117.0}, 'output_voltage': 117.0}]
+final reward:0.014435624387095277
+query time:10
+hash query time:25
+end at:2021-05-25 01:12:07.785595
+start at:2021-05-25 01:11:36.545827
+execute time:31 seconds
+result with parameter:0.2
+----------------------------------------------------------------------
+configs:{'max_episode_length': 100000000, 'deterministic': 'True', 'ucb_scalar': 20.0, 'gamma': 1.0, 'rave_k': 16.0, 'rave_scalar': 1.0, 'leaf_value': 0, 'end_episode_value': 0, 'algorithm': 'GS', 'root_parallel': False, 'act_selection': 'Pmerge', 'tree_num': 1, 'thread_num': 1, 'position_num': 1, 'game_num': 1, 'dep_start': -1, 'dep_end': 0, 'dep_step_len': 1, 'traj_start': 20, 'traj_end': 21, 'traj_step_len': 1, 'sys_os': 'linux', 'output': False, 'num_component': 8, 'freq': '200000', 'vin': '50', 'D': '0.48', 'mutate_num': 3, 'mutate_generation': 20, 'individual_num': 15, 'must_have_switch': False, 'prohibit_path': True, 'approve_path': False, 'whole_default_policy': False, 'component_default_policy': False, 'path_default_policy': False, 'DP_path_basic_weight': 0.01, 'target_vout': 200, 'range_percentage': 0.5, 'min_vout': 100.0, 'max_vout': 300.0}
+final rewards:0.014435624387095277
+--------------------Finished genetic search-------------------
+Final topology of game :
+component_pool:['GND', 'VIN', 'VOUT', 'L0', 'Sb0', 'Sb1', 'Sa0', 'Sa1']
+0.9
+port_pool:['GND', 'VIN', 'VOUT', 'L0-left', 'L0-right', 'Sb0-left', 'Sb0-right', 'Sb1-left', 'Sb1-right', 'Sa0-left', 'Sa0-right', 'Sa1-left', 'Sa1-right']
+graph:defaultdict(<class 'set'>, {0: {11}, 11: {0, 3}, 1: {7}, 7: {1}, 2: {5}, 5: {8, 2}, 3: {11}, 4: {10}, 10: {4}, 6: {9}, 9: {12, 6}, 8: {5}, 12: {9}})
+efficiency:[{'parameter': '0.9', 'efficiency': {'efficiency': 0.98, 'output_voltage': 98.0}, 'output_voltage': 98.0}]
+final reward:0.0037052938749072843
+query time:14
+hash query time:25
+end at:2021-05-25 01:12:28.336365
+start at:2021-05-25 01:11:36.545827
+execute time:51 seconds
+result with parameter:0.9
+----------------------------------------------------------------------
+configs:{'max_episode_length': 100000000, 'deterministic': 'True', 'ucb_scalar': 20.0, 'gamma': 1.0, 'rave_k': 16.0, 'rave_scalar': 1.0, 'leaf_value': 0, 'end_episode_value': 0, 'algorithm': 'GS', 'root_parallel': False, 'act_selection': 'Pmerge', 'tree_num': 1, 'thread_num': 1, 'position_num': 1, 'game_num': 1, 'dep_start': -1, 'dep_end': 0, 'dep_step_len': 1, 'traj_start': 20, 'traj_end': 21, 'traj_step_len': 1, 'sys_os': 'linux', 'output': False, 'num_component': 8, 'freq': '200000', 'vin': '50', 'D': '0.48', 'mutate_num': 3, 'mutate_generation': 20, 'individual_num': 15, 'must_have_switch': False, 'prohibit_path': True, 'approve_path': False, 'whole_default_policy': False, 'component_default_policy': False, 'path_default_policy': False, 'DP_path_basic_weight': 0.01, 'target_vout': 200, 'range_percentage': 0.5, 'min_vout': 100.0, 'max_vout': 300.0}
+final rewards:0.0037052938749072843
+--------------------Finished genetic search-------------------
+Final topology of game :
+component_pool:['GND', 'VIN', 'VOUT', 'Sb0', 'L0', 'Sb1', 'Sb2', 'Sa0']
+0.7
+port_pool:['GND', 'VIN', 'VOUT', 'Sb0-left', 'Sb0-right', 'L0-left', 'L0-right', 'Sb1-left', 'Sb1-right', 'Sb2-left', 'Sb2-right', 'Sa0-left', 'Sa0-right']
+graph:defaultdict(<class 'set'>, {0: {10, 4}, 10: {0}, 1: {12, 5}, 5: {1, 7}, 2: {11}, 11: {8, 2}, 3: {9, 6}, 6: {3}, 4: {0}, 7: {5}, 8: {11}, 9: {3}, 12: {1}})
+efficiency:[{'parameter': '0.7', 'efficiency': {'efficiency': 0.98, 'output_voltage': 98.0}, 'output_voltage': 98.0}]
+final reward:0.0037052938749072843
+query time:10
+hash query time:20
+end at:2021-05-25 01:12:40.584577
+start at:2021-05-25 01:11:36.545827
+execute time:64 seconds
+result with parameter:0.7
+----------------------------------------------------------------------
+configs:{'max_episode_length': 100000000, 'deterministic': 'True', 'ucb_scalar': 20.0, 'gamma': 1.0, 'rave_k': 16.0, 'rave_scalar': 1.0, 'leaf_value': 0, 'end_episode_value': 0, 'algorithm': 'GS', 'root_parallel': False, 'act_selection': 'Pmerge', 'tree_num': 1, 'thread_num': 1, 'position_num': 1, 'game_num': 1, 'dep_start': -1, 'dep_end': 0, 'dep_step_len': 1, 'traj_start': 20, 'traj_end': 21, 'traj_step_len': 1, 'sys_os': 'linux', 'output': False, 'num_component': 8, 'freq': '200000', 'vin': '50', 'D': '0.48', 'mutate_num': 3, 'mutate_generation': 20, 'individual_num': 15, 'must_have_switch': False, 'prohibit_path': True, 'approve_path': False, 'whole_default_policy': False, 'component_default_policy': False, 'path_default_policy': False, 'DP_path_basic_weight': 0.01, 'target_vout': 200, 'range_percentage': 0.5, 'min_vout': 100.0, 'max_vout': 300.0}
+final rewards:0.0037052938749072843
+--------------------Finished genetic search-------------------
+#Efficiency:{'efficiency': 0.64, 'output_voltage': 93.0}#FinalRewards:0.0013818636071277286#ExecuteTime:15#QueryTime:12#HashSize:12
+#Efficiency:{'efficiency': 0.58, 'output_voltage': 117.0}#FinalRewards:0.014435624387095277#ExecuteTime:31#QueryTime:10#HashSize:10
+#Efficiency:{'efficiency': 0.98, 'output_voltage': 98.0}#FinalRewards:0.0037052938749072843#ExecuteTime:51#QueryTime:14#HashSize:14
+#Efficiency:{'efficiency': 0.98, 'output_voltage': 98.0}#FinalRewards:0.0037052938749072843#ExecuteTime:64#QueryTime:10#HashSize:10

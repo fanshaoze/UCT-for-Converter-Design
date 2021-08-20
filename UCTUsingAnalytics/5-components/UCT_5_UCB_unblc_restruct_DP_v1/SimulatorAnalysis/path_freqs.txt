@@ -1,0 +1,83 @@
+Most occurrences in positive cases
+path: VIN - inductor - VOUT
+freq: 0.2205
+path: VIN - FET-B - VOUT
+freq: 0.2189
+path: VIN - capacitor - GND
+freq: 0.1956
+path: VOUT - inductor - capacitor - GND
+freq: 0.1820
+path: VIN - inductor - capacitor - GND
+freq: 0.1763
+path: VOUT - FET-B - capacitor - GND
+freq: 0.1727
+path: VIN - FET-B - capacitor - GND
+freq: 0.1695
+path: VOUT - capacitor - GND
+freq: 0.1524
+path: VOUT - capacitor - capacitor - GND
+freq: 0.0721
+path: VIN - capacitor - capacitor - GND
+freq: 0.0713
+path: VOUT - FET-A - capacitor - GND
+freq: 0.0602
+path: VOUT - FET-B - FET-B - capacitor - GND
+freq: 0.0486
+path: VIN - FET-A - capacitor - GND
+freq: 0.0446
+path: VIN - inductor - FET-B - capacitor - GND
+freq: 0.0379
+path: VIN - inductor - inductor - capacitor - GND
+freq: 0.0360
+path: VIN - FET-B - capacitor - capacitor - GND
+freq: 0.0332
+path: VIN - FET-B - inductor - capacitor - GND
+freq: 0.0329
+path: VIN - capacitor - capacitor - VOUT
+freq: 0.0317
+path: VIN - FET-B - FET-B - capacitor - GND
+freq: 0.0310
+path: VOUT - FET-B - inductor - capacitor - GND
+freq: 0.0298
+
+Most occurrences in negative cases
+path: VIN - inductor - GND
+freq: 0.2652
+path: VIN - FET-A - GND
+freq: 0.2532
+path: VIN - FET-B - GND
+freq: 0.2492
+path: VOUT - FET-B - GND
+freq: 0.2238
+path: VOUT - FET-A - GND
+freq: 0.2164
+path: VOUT - inductor - GND
+freq: 0.2035
+path: VIN - FET-A - FET-A - GND
+freq: 0.0749
+path: VIN - FET-B - FET-B - GND
+freq: 0.0724
+path: VIN - inductor - inductor - GND
+freq: 0.0715
+path: VOUT - inductor - inductor - GND
+freq: 0.0700
+path: VIN - FET-A - inductor - GND
+freq: 0.0694
+path: VOUT - FET-A - FET-A - GND
+freq: 0.0645
+path: VIN - inductor - FET-A - GND
+freq: 0.0614
+path: VIN - FET-B - inductor - GND
+freq: 0.0595
+path: VOUT - FET-A - inductor - GND
+freq: 0.0586
+path: VOUT - inductor - FET-B - GND
+freq: 0.0580
+path: VOUT - FET-B - inductor - GND
+freq: 0.0571
+path: VOUT - capacitor - FET-B - GND
+freq: 0.0570
+path: VOUT - FET-B - FET-B - GND
+freq: 0.0565
+path: VOUT - inductor - FET-A - GND
+freq: 0.0562

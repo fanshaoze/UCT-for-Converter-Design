@@ -1,0 +1,35 @@
+Final topology of game :
+component_pool:['GND', 'VIN', 'VOUT', 'Sb0', 'C0', 'C1', 'Sb1', 'Sb2']
+0.9
+port_pool:['GND', 'VIN', 'VOUT', 'Sb0-left', 'Sb0-right', 'C0-left', 'C0-right', 'C1-left', 'C1-right', 'Sb1-left', 'Sb1-right', 'Sb2-left', 'Sb2-right']
+graph:defaultdict(<class 'set'>, {0: {10}, 10: {0}, 1: {11, 4, 5}, 4: {1}, 2: {7}, 7: {2, 12}, 3: {12}, 12: {3, 7}, 5: {8, 1}, 6: {9}, 9: {6}, 8: {5}, 11: {1}})
+efficiency:[{'parameter': '0.9', 'efficiency': 0.99, 'output_voltage': 99.0}]
+final reward:0.0041734676337375366
+query time:13
+hash query time:34
+end at:2021-07-31 02:05:47.232522
+start at:2021-07-31 01:48:50.370111
+execute time:1016 seconds
+result with parameter:0.9
+----------------------------------------------------------------------
+configs:{'max_episode_length': 100000000, 'deterministic': 'True', 'ucb_scalar': 20.0, 'gamma': 1.0, 'rave_k': 16.0, 'rave_scalar': 1.0, 'leaf_value': 0, 'end_episode_value': 0, 'algorithm': 'GS', 'root_parallel': False, 'act_selection': 'Pmerge', 'tree_num': 1, 'thread_num': 1, 'position_num': 1, 'game_num': 1, 'dep_start': -1, 'dep_end': 0, 'dep_step_len': 1, 'traj_start': 20, 'traj_end': 21, 'traj_step_len': 1, 'sys_os': 'linux', 'output': False, 'num_component': 8, 'freq': '200000', 'vin': '50', 'D': '0.48', 'mutate_num': 3, 'mutate_generation': 20, 'individual_num': 15, 'must_have_switch': False, 'prohibit_path': True, 'approve_path': False, 'whole_default_policy': False, 'component_default_policy': False, 'path_default_policy': False, 'DP_path_basic_weight': 0.01, 'target_vout': 200, 'range_percentage': 0.5, 'reward_method': 'analytics', 'fix_paras': None, 'min_vout': 100.0, 'max_vout': 300.0}
+final rewards:0.0041734676337375366
+Final topology of game :
+component_pool:['GND', 'VIN', 'VOUT', 'Sb0', 'L0', 'L1', 'Sb1', 'C0']
+0.8
+port_pool:['GND', 'VIN', 'VOUT', 'Sb0-left', 'Sb0-right', 'L0-left', 'L0-right', 'L1-left', 'L1-right', 'Sb1-left', 'Sb1-right', 'C0-left', 'C0-right']
+graph:defaultdict(<class 'set'>, {0: {3}, 3: {0}, 1: {10, 11}, 11: {1}, 2: {6}, 6: {2, 7}, 4: {5}, 5: {4}, 7: {6}, 8: {9}, 9: {8, 12}, 12: {9}, 10: {1}})
+efficiency:[{'parameter': '0.8', 'efficiency': 0.98, 'output_voltage': 98.0}]
+final reward:0.0037052938749072843
+query time:9
+hash query time:21
+end at:2021-07-31 02:14:11.262168
+start at:2021-07-31 01:48:50.370111
+execute time:1520 seconds
+result with parameter:0.8
+----------------------------------------------------------------------
+configs:{'max_episode_length': 100000000, 'deterministic': 'True', 'ucb_scalar': 20.0, 'gamma': 1.0, 'rave_k': 16.0, 'rave_scalar': 1.0, 'leaf_value': 0, 'end_episode_value': 0, 'algorithm': 'GS', 'root_parallel': False, 'act_selection': 'Pmerge', 'tree_num': 1, 'thread_num': 1, 'position_num': 1, 'game_num': 1, 'dep_start': -1, 'dep_end': 0, 'dep_step_len': 1, 'traj_start': 20, 'traj_end': 21, 'traj_step_len': 1, 'sys_os': 'linux', 'output': False, 'num_component': 8, 'freq': '200000', 'vin': '50', 'D': '0.48', 'mutate_num': 3, 'mutate_generation': 20, 'individual_num': 15, 'must_have_switch': False, 'prohibit_path': True, 'approve_path': False, 'whole_default_policy': False, 'component_default_policy': False, 'path_default_policy': False, 'DP_path_basic_weight': 0.01, 'target_vout': 200, 'range_percentage': 0.5, 'reward_method': 'analytics', 'fix_paras': None, 'min_vout': 100.0, 'max_vout': 300.0}
+final rewards:0.0037052938749072843
+['efficiency', 'vout', 'reward', 'DC_para', 'query']
+[0.99, 99.0, 0.0041734676337375366, '0.9', 13]
+[0.98, 98.0, 0.0037052938749072843, '0.8', 9]

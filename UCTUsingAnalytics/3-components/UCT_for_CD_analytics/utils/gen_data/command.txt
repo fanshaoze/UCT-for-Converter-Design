@@ -1,0 +1,6 @@
+python3 1_build_topology.py -output_folder=component_data_random -ngspice_para="freq=200000 vin=50 rload=50 iout=0.2 rcap=1Meg rind=0.1 rvinout=0.1 D=0.48" -cap_paras=1,5,20,50 -ind_paras=1,10,50,150 -os=linux -n_components=4-n_topology=5000
+
+python3 2_simulation.py -output_folder=component_data_random -os=linux -n_components=4 -n_topology=5000
+
+python3 3_simulation_analysis.py -output_folder=component_data_random -input_voltage=50 -freq=200000 -os=linux -n_components=4 -n_topology=5000
+

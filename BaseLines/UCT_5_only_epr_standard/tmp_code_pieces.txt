@@ -1,0 +1,28 @@
+def change_node(self, pre_component_id, changed_node_id):
+        pre_component = self.current.component_pool[pre_component_id]
+        pre_ports_idx = self.current.comp2port_mapping[pre_component_id]
+        pre_left_port_index = pre_ports_idx[0]
+        pre_right_port_index = pre_ports_idx[1]
+        pre_component_type = pre_component[:pre_component.rfind('-')]
+        # print(pre_component_type)
+        self.current.count_map[pre_component_type] -= 1
+        self.current.same_device_mapping.pop(self.current.port_2_idx[pre_component + '-left'])
+        self.current.same_device_mapping.pop(self.current.port_2_idx[pre_component + '-right'])
+
+        self.current.count_map[self.basic_components[changed_node_id]] += 1
+        changed_component = self.basic_components[changed_node_id] + '-' + str(pre_component_id)
+
+        self.current.component_pool[pre_component_id] = changed_component
+
+        self.current.port_pool[pre_left_port_index] = changed_component + '-left'
+        self.current.port_pool[pre_right_port_index] = changed_component + '-right'
+
+        self.current.idx_2_port[pre_left_port_index] = changed_component + '-left'
+        self.current.idx_2_port[pre_right_port_index] = changed_component + '-right'
+
+        self.current.port_2_idx[changed_component + '-left'] = self.current.port_2_idx.pop(pre_component + '-left')
+        self.current.port_2_idx[changed_component + '-right'] = self.current.port_2_idx.pop(pre_component + '-right')
+        self.current.same_device_mapping[self.current.port_2_idx[changed_component + '-left']] = \
+            self.current.port_2_idx[changed_component + '-right']
+        self.current.same_device_mapping[self.current.port_2_idx[changed_component + '-right']] = \
+            self.current.port_2_idx[changed_component + '-left']
