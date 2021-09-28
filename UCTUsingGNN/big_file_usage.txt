@@ -1,0 +1,2 @@
+unzip big_files_for_GNN.zip under the UCYUsingGNN
+move json files in the UCT_5_UCB_unblc_restruct_DP_v1/SimulatorAnalysis/database 

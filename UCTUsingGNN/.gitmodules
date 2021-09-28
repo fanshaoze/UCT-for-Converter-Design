@@ -1,0 +1,12 @@
+[submodule "UCFTopo_dev"]
+	path = UCFTopo_dev
+	url = git@github.com:shunzh/UCFTopo_dev.git
+[submodule "topo_data"]
+	path = topo_data
+	url = git@github.com:shunzh/topo_data.git
+[submodule "transformer_SVGP"]
+	path = transformer_SVGP
+	url = git@github.com:shunzh/transformer_SVGP.git
+[submodule "UCT_5_only_epr_standard"]
+	path = UCT_5_only_epr_standard
+	url = git@github.com:shunzh/UCT_5_only_epr_standard.git
