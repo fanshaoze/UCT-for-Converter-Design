@@ -467,8 +467,8 @@ def serial_UCF_test(trajectory, test_number, configs, result_folder, Sim=None, u
         avg_step_list.append(avg_steps)
 
         UCT_data_collection.save_sta_result(uct_simulators[0].key_sta, 'sta_only_epr.json')
-
-        UCT_data_collection.save_no_sweep_analytics_result(uct_simulators[0].key_expression)
+        if configs['reward_method'] == 'analytics':
+            UCT_data_collection.save_no_sweep_analytics_result(uct_simulators[0].key_expression)
         # TODO save simulation rewards
         if not configs['skip_sim']:
             UCT_data_collection.save_no_sweep_sim_result(uct_simulators[0].key_sim_effi_)

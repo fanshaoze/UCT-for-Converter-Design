@@ -26,7 +26,7 @@ def get_args():
     parser.add_argument(
         '--seed', type=int, default=0, help='random seed (default: 0)')
     parser.add_argument(
-        '--seed-range', nargs='+', type=int, default=[0, 2], help='random seed range')
+        '--seed-range', nargs='+', type=int, default=[0, 10], help='random seed range')
 
     parser.add_argument(
         '--dry', action='store_true', default=False, help='dry run')
@@ -52,7 +52,7 @@ def get_args():
         '--model', type=str, default='gnn', choices=['simulator', 'transformer', 'gp', 'analytics', 'gnn'], help='surrogate model'
     )
     parser.add_argument(
-        '--traj', nargs='+', type=int, default=[10, 11], help='trajectory numbers'
+        '--traj', nargs='+', type=int, default=[100], help='trajectory numbers'
     )
 
     # parser.add_argument(

@@ -72,6 +72,7 @@ def gp_reward_uct_exp(args):
             results[k][_traj_num] = []
     rows = []  # record rewards after each query, size: num of query * num of random seed
     last_rows = []
+    analysis_results = {}
 
     for seed in seed_range:
         result = {}
@@ -103,16 +104,19 @@ def gp_reward_uct_exp(args):
 
                 else:
                     _configs['test_number'] = 1
-                    _configs['reward_method'] = 'analytics'
+                    _configs['reward_method'] = 'gnn'
                     _configs['skip_sim'] = args.skip_sim
                     _configs['sweep'] = args.sweep
-                    # _configs['topk_list'] = args.k_list
+                    _configs['topk_list'] = args.k_list
+
                     info = run_uct_5_comp(Sim=sim_init, traj=traj_num, configs=_configs)
             else:
                 raise Exception('unknown task ' + config.task)
 
             sim = info['sim']
-            cand_states = sim.no_isom_seen_state_list
+            # if args.sweep:
+            cand_states = [top_topo[0] for top_topo in sim.topk]
+            # cand_states = sim.no_isom_seen_state_list
             query_num = info['query_num']
 
             if args.model == 'simulator':

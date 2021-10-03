@@ -103,12 +103,12 @@ class SurrogateRewardTopologySim(TopoGenSimulator, ABC):
             return self.reward
 
         topo_key = self.get_topo_key()
-        if topo_key+'$'+str(self.current.parameters) in self.surrogate_hash_table:
+        if topo_key + '$' + str(self.current.parameters) in self.surrogate_hash_table:
             self.hash_counter += 1
-            return self.surrogate_hash_table[topo_key+'$'+str(self.current.parameters)]
+            return self.surrogate_hash_table[topo_key + '$' + str(self.current.parameters)]
         else:
             if self.configs_['skip_sim'] and \
-                    (topo_key+'$'+str(self.current.parameters) not in self.key_sim_effi_):
+                    (topo_key + '$' + str(self.current.parameters) not in self.key_sim_effi_):
                 reward = 0
                 effi_info = {'efficiency': 0, 'Vout': 500}
                 tmp_para = self.current.parameters
@@ -135,8 +135,12 @@ class SurrogateRewardTopologySim(TopoGenSimulator, ABC):
             print('estimated reward {}, eff {}, vout {}'.format(self.reward, eff, vout))
             print('true performance {}'.format(self.get_true_performance()))
 
-        self.surrogate_hash_table[topo_key+'$'+str(self.current.parameters)] = self.reward
+        self.surrogate_hash_table[topo_key + '$' + str(self.current.parameters)] = self.reward
         print(topo_key, eff, vout, reward, parameter)
+        if self.configs_['sweep']:
+            self.update_topk(topo_key)
+        else:
+            self.update_topk_topology_with_para(topo_key + '$' + str(self.current.parameters))
         self.no_isom_seen_state_list.append(copy.deepcopy(self.current))
 
         return self.reward
@@ -154,6 +158,7 @@ class SurrogateRewardTopologySim(TopoGenSimulator, ABC):
         return the vout prediction of state, and of self.get_state() if None
         """
         pass
+
     def get_surrogate_reward(self, state):
         """
         return the vout prediction of state, and of self.get_state() if None
@@ -161,16 +166,45 @@ class SurrogateRewardTopologySim(TopoGenSimulator, ABC):
         pass
 
     def get_true_performance(self, state=None):
-        # call the file
+        if not self.configs_['sweep']:
+            return self.get_no_sweep_true_performance(state)
+        else:
+            return self.get_sweep_true_performance_with_para(state)
 
+    def get_no_sweep_true_performance(self, state=None):
+        reward, eff, vout = self.get_true_performance_of_sim(state)
+        return reward, eff, vout
+
+    def get_sweep_true_performance_with_para(self, state=None):
+        tmp_para = -1
+        tmp_max_reward = -1
+        tmp_max_eff = -1
+        tmp_max_vout = -500
+        for duty_cycle in self.candidate_duty_cycles:
+            state.parameters = duty_cycle
+            reward, eff, vout = self.get_true_performance_of_sim(state)
+            if tmp_max_reward < reward:
+                tmp_max_reward = reward
+                tmp_para = duty_cycle
+                tmp_max_eff = eff
+                tmp_max_vout = vout
+        self.current.parameters = tmp_para
+        return tmp_max_reward, tmp_max_eff, tmp_max_vout
+
+    def get_true_performance_of_sim(self, state):
+        # call the file
+        # TODO forget to deal with the sweep!
         """
         :return: [reward, eff, vout]
         """
         if state is not None:
             self.set_state(None, None, state)
+        else:
+            return [0, -1, -500]
 
         if not self.current.graph_is_valid():
             return [0, -1, -500]
+
 
         hash = self.get_topo_key()
 
@@ -194,7 +228,7 @@ class SurrogateRewardTopologySim(TopoGenSimulator, ABC):
             return reward, eff, vout
 
         else:
-            if config.task == 'uct_3_comp' or config.task == 'rs_3_comp' :
+            if config.task == 'uct_3_comp' or config.task == 'rs_3_comp':
                 return self.graph_2_reward[hash + '$' + str(state.parameters)]
             elif config.task == 'uct_5_comp':
                 para, eff, vout = self.graph_2_reward[hash + '$' + str(state.parameters)]

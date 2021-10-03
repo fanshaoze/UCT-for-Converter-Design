@@ -1138,6 +1138,7 @@ class TopoGenSimulator(uct.Simulator):
 
         return self.reward
 
+
     def update_topk(self, key_info):
         def keyFunc(element):
             return element[1]
