@@ -1,0 +1,22 @@
+get the big files:
+	unzip big_files_for_GNN.zip under the UCYUsingGNN
+	move json files in the UCT_5_UCB_unblc_restruct_DP_v1/SimulatorAnalysis/database 
+
+Main program is topoQueryExp.py
+
+Settings:
+To set seed range from a to b(include b): --seed-range a b+1 # it also means run b-a+1 times
+To sweep parameters for topologies: --sweep # if not, just do not need to add --sweep in the argument set
+To only query the topologies in the pre collected topologies: --skip-sim # if not, just do not need to add --skip-sim in the argument set
+To set different topks like a,b and c: --k-list a b c
+To set the reward method as m: --model m # m must in ['simulator', 'transformer', 'gp', 'analytics', 'gnn']
+To try different number of trajectories a, b and c: --traj a b c
+To use the rounded vout for reward: --round vout # if not, must replace vout with anything else(may can be optimized)
+
+Example:
+	If we want to test UCT + analytics, trajectory as 10,50,100, topk as 10, 50, 100, 150, 200, run 20 times:
+	nohup python3 topoQueryExp.py --model analytics --traj 10 50 100 --k-list 10 50 100 150 200 --seed-range 0 20 >out.log 2<&1 &
+	nohup python3 topoQueryExp.py --model gnn --traj 10 50 100 --k-list 10 50 100 150 200 --seed-range 0 20 >out.log 2<&1 &
+	nohup python3 topoQueryExp.py --model simulator --traj 10 50 100 --k-list 10 50 100 150 200 --seed-range 0 20 >out.log 2<&1 &
+
+NOTE: all the default setting is in arguments.py
