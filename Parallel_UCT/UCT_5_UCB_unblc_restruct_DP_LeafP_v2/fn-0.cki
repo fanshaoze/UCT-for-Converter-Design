@@ -1,0 +1,30 @@
+.title buck.cki
+.model MOSN NMOS level=8 version=3.3.0
+.model MOSP PMOS level=8 version=3.3.0
+.model MySwitch SW (Ron=100000.0 Roff=1.0 vt=50.0)
+.PARAM vin=100.0 rin=0.1 rout=50.0 cout=10.0u freq=1.0M D=0.9
+
+
+*input*
+Vclock1 gate_a 0 PULSE (0 {vin} 0 1n 1n 0.9u 1.0u)
+Vclock2 gate_b 0 PULSE ({vin} 0 0 1n 1n 0.9u 1.0u)
+Vin IN_exact 0 dc {vin} ac 1
+Rin IN_exact IN {rin}
+Rout OUT 0 {rout}
+Cout OUT 0 {cout}
+
+*topology*
+Sa0 OUT 11 gate_a gate_b MySwitch
+Sa1 0 7 gate_a gate_b MySwitch
+Sa2 7 12 gate_a gate_b MySwitch
+Sa3 IN 11 gate_a gate_b MySwitch
+Sa4 11 12 gate_a gate_b MySwitch
+
+
+.save all
+.control
+tran 10n 4000u
+print V(OUT)
+print V(IN_exact,IN)
+.endc
+.end
